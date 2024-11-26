@@ -3,7 +3,7 @@
 # There is no SAMantics!
 ## Exploring SAM as a Backbone for Visual Understanding Tasks
 
-[Arxiv Paper](https://arxiv.org/abs/2308.16648) <!-- | [Project Page](https://miquel-espinosa.github.io/samantics/) -->
+[Arxiv Paper](https://arxiv.org/abs/2411.15288) <!-- | [Project Page](https://miquel-espinosa.github.io/samantics/) -->
 
 <!-- https://github.com/user-attachments/assets/df92a34c-cefb-4f24-aaa6-b1bf38adbbe1 -->
 
