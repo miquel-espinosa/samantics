@@ -1,35 +1,49 @@
+## 📢 **New Paper Alert: _No Time to Train!_**
+
+<details open>
+<summary><strong>We have released a follow-up work!</strong></summary>
+ 
+> 🚀 **_No Time to Train: Training-Free Reference-Based Instance Segmentation_**  
+> We achieve **state-of-the-art performance on few-shot segmentation benchmarks without any training**.
+> 
+> - 🧾 [**Read the arXiv paper**](https://arxiv.org/abs/2507.02798)  
+> - 🌐 [**Visit the project page**](https://miquel-espinosa.github.io/no-time-to-train/)  
+> - 📈 [**Check it out on Papers with Code**](https://paperswithcode.com/paper/no-time-to-train-training-free-reference)  
+> - 🐙 [**GitHub Repository**](https://github.com/miquel-espinosa/no-time-to-train)
+
+
+
+</details>
+
 <div align="center">
 
-# There is no SAMantics!
+# 🚫 There is no **SAMantics!**  
 ## Exploring SAM as a Backbone for Visual Understanding Tasks
 
-[Arxiv Paper](https://arxiv.org/abs/2411.15288) | [Project Page](https://miquel-espinosa.github.io/samantics/)
-
-<!-- https://github.com/user-attachments/assets/df92a34c-cefb-4f24-aaa6-b1bf38adbbe1 -->
-
+[📄 ArXiv Paper](https://arxiv.org/abs/2411.15288) | [🌐 Project Page](https://miquel-espinosa.github.io/samantics/)
 
 </div>
 
+## 📜 Abstract
+
 > _The Segment Anything Model (SAM) was originally designed for label-agnostic mask generation. Does this model also possess inherent semantic understanding, of value to broader visual tasks? In this work we follow a multi-staged approach towards exploring this question. We firstly quantify SAM's semantic capabilities by comparing base image encoder efficacy under classification tasks, in comparison with established models (CLIP and DINOv2). Our findings reveal a significant lack of semantic discriminability in SAM feature representations, limiting potential for tasks that require class differentiation. This initial result motivates our exploratory study that attempts to enable semantic information via in-context learning with lightweight fine-tuning where we observe that generalisability to unseen classes remains limited. Our observations culminate in the proposal of a training-free approach that leverages DINOv2 features, towards better endowing SAM with semantic understanding and achieving instance-level class differentiation through feature-based similarity. Our study suggests that incorporation of external semantic sources provides a promising direction for the enhancement of SAM's utility with respect to complex visual tasks that require semantic understanding._
 
-
-
-## Quantifying Semantics in SAM
+## 🧠 Quantifying Semantics in SAM
 Benchmarking SAM feature representations against popular vision encoders (CLIP and DINOv2) on ImageNet1K classification, measuring the presence of semantics via linear probing on respective features.
 
-### Installation instructions
+### 🔧 Installation instructions
 ```shell
 pip install torch torhcvision pytorch_lightning timm torchmetrics tensorboard
 ```
 
-### Training ImageNet1K linear probing
+### 🏋️‍♀️ Training ImageNet1K linear probing
 Code for training and evaluating linear classifiers on frozen vision encoders can be found in `linprob_img_encoders/*`.
 
 
-## Recovering Semantics in SAM
+## 🧪 Recovering Semantics in SAM
 In-context learning with reference images for SAM fine-tuning to capture class-specific information. 
 
-### Installation instructions
+### 🔧 Installation instructions
 
 ```shell
 conda create -n ref_sam python=3.8 -y
@@ -46,18 +60,18 @@ pip install lvis
 pip install -e .
 ```
 
-### Fine-tuning SAM for in-context semantic prompting
+### 🔁 Fine-tuning SAM for in-context semantic prompting
 
 Code for fine-tuning SAM for in-context semantic prompting can be found in `reference_sam/*`.
 
-#### Training
+#### 🏋️‍♂️ Training
 
 ```shell
 python tools/train.py $CONFIG_FILE
 ```
 For multi-node training, see scripts in `scripts/train/*`
 
-#### Testing
+#### 🧪 Testing
 Three steps are required to evaluate the fine-tuned SAM model:
 1. Create a new json selecting the reference images for the COCO dataset.
 ```shell
@@ -120,7 +134,7 @@ sh tools/dist_test.sh $CONFIG_FILE $CHECKPOINT 4 \
 ```
 
 
-## Citation
+## 📖 Citation
 If you find this work helpful please consider citing
 ```
 @article{espinosa2024samantics,
